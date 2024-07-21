@@ -595,8 +595,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.SUR_TXT.format(query.from_user.mention, temp.text=script.START_TXT.format(query.from_user.mentionU_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )
-        
+        )     
     elif query.data == "help2":
         buttons = [[
             InlineKeyboardButton('𝙁𝙄𝙇𝙏𝙀𝙍𝙎', callback_data='filters'),
