@@ -592,7 +592,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.SUR_TXT.format(query.from_user.mention, temp.text=script.START_TXT.format(query.from_user.mentionU_NAME, temp.B_NAME),
+            text=script.SUR_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )     
