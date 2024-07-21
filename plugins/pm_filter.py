@@ -583,15 +583,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿𝚂 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('❤️‍🔥 𝑨𝑫𝑫 𝑴𝑬 𝑻𝑶 𝒀𝑶𝑼𝑹 𝑮𝑹𝑶𝑼𝑷 ❤️‍🔥', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚡ 𝙲𝚁𝙴𝙳𝙸𝚃𝚂', callback_data="credit_info"),
-            InlineKeyboardButton('👑 𝙾𝚆𝙽𝙴𝚁', callback_data="owner_info")
-            ],[      
-            InlineKeyboardButton('🛠 𝙷𝙴𝙻𝙿', callback_data='help2'),
-            InlineKeyboardButton('ℹ️ 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
-            ],[
-            InlineKeyboardButton('🔥 𝚂𝚄𝙿𝙿𝙾𝚁𝚃', callback_data="group_info")
+            InlineKeyboardButton('🔰 𝑭𝑬𝑨𝑻𝑼𝑹𝑬𝑺', callback_data="help2"),
+            InlineKeyboardButton('🔱 𝑶𝑾𝑵𝑬𝑹', callback_data="owner_info")
+            ],[     
+            InlineKeyboardButton('⚡ 𝑨𝑩𝑶𝑼𝑻', callback_data="group_info")
         ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
