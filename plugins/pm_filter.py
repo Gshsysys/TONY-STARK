@@ -66,6 +66,20 @@ def get_ram_status():
     ram_usage = memory_info.rss / 1024 ** 2  
     return f"✪ ʀᴀᴍ : {ram_usage:.2f} ᴍʙ"
 
+def get_greeting():
+    from datetime import datetime
+    kolkata_tz = pytz.timezone('Asia/Kolkata')
+    currentt_time = datetime.now(kolkata_tz).time()
+    
+    if currentt_time >= datetime.strptime("00:00", "%H:%M").time() and currentt_time < datetime.strptime("12:00", "%H:%M").time():
+        return "Gooᴅ Mᴏʀɴɪɴɢ"
+    elif currentt_time >= datetime.strptime("12:00", "%H:%M").time() and currentt_time < datetime.strptime("16:00", "%H:%M").time():
+        return "Gᴏᴏᴅ Aғᴛᴇʀɴᴏᴏɴ"
+    elif currentt_time >= datetime.strptime("16:00", "%H:%M").time() and currentt_time < datetime.strptime("19:00", "%H:%M").time():
+        return "Gᴏᴏᴅ Eᴠᴇɴɪɴɢ"
+    else:
+        return "Gᴏᴏᴅ Nɪɢʜᴛ"
+
 @Client.on_message(filters.command('autofilter') & filters.user(ADMINS))
 async def fil_mod(client, message): 
       mode_on = ["yes", "on", "true"]
