@@ -76,6 +76,11 @@ COMMAND_HAND_LER = ("/")
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "")
+DATABASE_URI3 = environ.get('DATABASE_URI3', "")
+DATABASE_URI4 = environ.get('DATABASE_URI4', "")
+DATABASE_URI5 = environ.get('DATABASE_URI5', "")
+DATABASE_URI6 = environ.get('DATABASE_URI6', "")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 MONGO_URL = os.environ.get('MONGO_URL', "mongodb+srv://amubaby:amubaby@lallus.84sdfpw.mongodb.net/?retryWrites=true&w=majority&appName=lallus")
 
