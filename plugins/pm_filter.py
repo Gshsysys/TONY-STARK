@@ -47,6 +47,19 @@ def get_current_datetime_info():
     time_zone_info = current_datetime.strftime('%Z %z')
     return current_day, current_date, current_time, time_zone_info
 
+start_time = time.time()
+def get_uptime():
+    uptime_seconds = time.time() - start_time
+    uptime_delta = timedelta(seconds=uptime_seconds)
+    hours, remainder = divmod(uptime_delta.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    uptime_string = f"{hours} hrs {minutes} mins {seconds} secs"
+    return uptime_string
+
+def cpu_status():
+    cpu_percent = psutil.cpu_percent()
+    return cpu_percent
+
 @Client.on_message(filters.command('autofilter') & filters.user(ADMINS))
 async def fil_mod(client, message): 
       mode_on = ["yes", "on", "true"]
