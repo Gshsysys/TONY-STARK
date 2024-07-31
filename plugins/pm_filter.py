@@ -60,6 +60,12 @@ def cpu_status():
     cpu_percent = psutil.cpu_percent()
     return cpu_percent
 
+def get_ram_status():
+    process = psutil.Process(os.getpid())
+    memory_info = process.memory_info()
+    ram_usage = memory_info.rss / 1024 ** 2  
+    return f"✪ ʀᴀᴍ : {ram_usage:.2f} ᴍʙ"
+
 @Client.on_message(filters.command('autofilter') & filters.user(ADMINS))
 async def fil_mod(client, message): 
       mode_on = ["yes", "on", "true"]
