@@ -38,6 +38,15 @@ BUTTONS = {}
 SPELL_CHECK = {}
 FILTER_MODE = {}
 
+def get_current_datetime_info():
+    time_zone = pytz.timezone('Asia/Kolkata')
+    current_datetime = datetime.datetime.now(time_zone)
+    current_day = current_datetime.strftime('%A')  # %A for full weekday name
+    current_date = current_datetime.strftime('%d-%m-%Y')
+    current_time = current_datetime.strftime('%I:%M:%S %p')
+    time_zone_info = current_datetime.strftime('%Z %z')
+    return current_day, current_date, current_time, time_zone_info
+
 @Client.on_message(filters.command('autofilter') & filters.user(ADMINS))
 async def fil_mod(client, message): 
       mode_on = ["yes", "on", "true"]
